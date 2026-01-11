@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Pick up"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Pickup search bar -->
+    <EditText
+        android:id="@+id/etPickup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Enter pickup location"
+        android:padding="12dp" />
+
+    <!-- Helper / status text -->
+    <TextView
+        android:id="@+id/tvPickupInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Detecting your current location..."
+        android:textColor="#777777"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- Select by map row -->
+    <LinearLayout
+        android:id="@+id/layoutSelectOnMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_mapmode" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Select location by map"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <!-- BIKE TYPE -->
+    <TextView
+        android:text="Select your bike type"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnRegularBike"
+            android:text="Regular Bike"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_outline"
+            android:textColor="@color/primary_blue"/>
+
+        <Button
+            android:id="@+id/btnScooter"
+            android:text="Scooter"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_outline"
+            android:textColor="@color/primary_blue"/>
+    </LinearLayout>
+
+    <!-- HELMET QUESTION -->
+    <TextView
+        android:text="Helmet covered by pillion?"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnHelmetYes"
+            android:text="Yes"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="0.5"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_outline"
+            android:textColor="@color/primary_blue"/>
+
+        <Button
+            android:id="@+id/btnHelmetNo"
+            android:text="No"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btn_outline"
+            android:textColor="@color/primary_blue"/>
+    </LinearLayout>
+
+    <!-- Confirm button -->
+    <Button
+        android:id="@+id/btnConfirmPickup"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/btn_rounded"
+        android:text="Confirm Pickup"
+        android:textColor="@color/white" />
+
+</LinearLayout>

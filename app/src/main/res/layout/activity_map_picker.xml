@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Map -->
+    <fragment
+        android:id="@+id/mapPicker"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Center pin -->
+    <ImageView
+        android:id="@+id/ivCenterPin"
+        android:src="@android:drawable/ic_menu_mylocation"
+        android:layout_gravity="center"
+        android:layout_width="32dp"
+        android:layout_height="32dp" />
+
+    <!-- Confirm button at bottom -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#AAFFFFFF"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnConfirmLocation"
+            android:text="Confirm location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="28dp"
+    android:layout_marginTop="25dp">
+
+    <!-- Greeting (Top-Left) -->
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, Name"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- Spacer to push Choose Mode to center -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5
+" />
+
+    <!-- Choose Mode (Centered vertically) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Mode"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Rider Card -->
+    <include
+        android:id="@+id/cardRider"
+        layout="@layout/rpcard"
+         />
+
+    <!-- Pillion Card -->
+    <include
+        android:id="@+id/cardPillion"
+        layout="@layout/rpcard" />
+
+    <!-- Bottom spacer for balance -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

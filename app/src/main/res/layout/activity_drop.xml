@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:id="@+id/ivBackDroped"
+            android:src="@drawable/back"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:text="Drop"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Drop search bar -->
+    <EditText
+        android:id="@+id/etDroped"
+        android:hint="Enter drop location"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Info / helper text -->
+    <TextView
+        android:id="@+id/tvDropedInfo"
+        android:text="Type your destination or select on map"
+        android:textSize="12sp"
+        android:textColor="#777777"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Select by map row -->
+    <LinearLayout
+        android:id="@+id/layoutSelectOnMapDroped"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:src="@android:drawable/ic_menu_mapmode"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:text="Select location by map"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Time -->
+    <EditText
+        android:id="@+id/etdropTime"
+        android:hint="Time (e.g., 8:30 AM)"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Amount -->
+    <EditText
+        android:id="@+id/etAmount"
+        android:hint="Amount (₹)"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Confirm Drop button -->
+    <Button
+        android:id="@+id/btnConfirmDroped"
+        android:text="Confirm Drop"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/btn_rounded"
+        android:textColor="@color/white" />
+
+</LinearLayout>
